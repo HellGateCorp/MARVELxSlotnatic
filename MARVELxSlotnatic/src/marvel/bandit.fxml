@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="marvel.FXMLController">
+   <children>
+      <SplitPane dividerPositions="0.3371710526315789, 0.6710526315789473" prefHeight="341.0" prefWidth="610.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="226.0" prefWidth="158.0">
+               <children>
+                  <Label fx:id="slot1" layoutX="-2.0" layoutY="44.0" prefHeight="252.0" prefWidth="200.0">
+                     <graphic>
+                        <ImageView fx:id="icon1" blendMode="HARD_LIGHT" fitHeight="252.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic></Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="slot2" layoutX="-2.0" layoutY="44.0" prefHeight="252.0" prefWidth="200.0">
+                     <graphic>
+                        <ImageView fx:id="icon2" blendMode="HARD_LIGHT" fitHeight="252.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic></Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="339.0" prefWidth="180.0">
+               <children>
+                  <Label fx:id="slot3" layoutX="1.0" layoutY="44.0" prefHeight="252.0" prefWidth="200.0">
+                     <graphic>
+                        <ImageView fx:id="icon3" blendMode="HARD_LIGHT" fitHeight="252.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic></Label>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <Button fx:id="go" blendMode="EXCLUSION" defaultButton="true" layoutX="549.0" layoutY="352.0" mnemonicParsing="false" onAction="#play" prefHeight="54.0" prefWidth="55.0" text="\$">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <TextField fx:id="gut" alignment="BASELINE_RIGHT" editable="false" layoutX="90.0" layoutY="362.0" prefHeight="34.0" prefWidth="93.0" text="250.00$">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="ein" alignment="BASELINE_CENTER" editable="false" layoutX="273.0" layoutY="362.0" prefHeight="34.0" prefWidth="55.0" text="10$">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="gew" alignment="BASELINE_LEFT" editable="false" layoutX="469.0" layoutY="361.0" prefHeight="34.0" prefWidth="74.0" text="0$">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="7.0" layoutY="364.0" prefHeight="41.0" prefWidth="83.0" text="Guthaben:" underline="true">
+         <font>
+            <Font name="Rockwell Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="BASELINE_LEFT" layoutX="209.0" layoutY="364.0" prefHeight="41.0" prefWidth="64.0" text="Einsatz:">
+         <font>
+            <Font name="Rockwell Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="BASELINE_LEFT" layoutX="405.0" layoutY="364.0" prefHeight="41.0" prefWidth="64.0" text="Gewinn:">
+         <font>
+            <Font name="Rockwell Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="banner" blendMode="MULTIPLY" fitHeight="341.0" fitWidth="610.0" opacity="0.83" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/banner.jpeg" />
+         </image>
+      </ImageView>
+      <Button blendMode="EXCLUSION" layoutX="337.0" layoutY="351.0" mnemonicParsing="false" onAction="#plus" text="+" />
+      <Button blendMode="EXCLUSION" layoutX="337.0" layoutY="388.0" mnemonicParsing="false" onAction="#minus" prefHeight="27.0" prefWidth="26.0" text="-" />
+      <Label fx:id="faktor" disable="true" layoutX="273.0" layoutY="349.0" prefHeight="17.0" prefWidth="64.0" text="Faktor=1" />
+      <Label disable="true" layoutX="363.0" layoutY="362.0" prefHeight="17.0" prefWidth="30.0" text="+0.5" />
+      <Label disable="true" layoutX="364.0" layoutY="403.0" prefHeight="17.0" prefWidth="30.0" text="-0.5" />
+      <Label fx:id="attention" layoutX="183.0" layoutY="357.0" prefHeight="54.0" prefWidth="15.0" text="!" visible="false">
+         <font>
+            <Font size="49.0" />
+         </font>
+      </Label>
+      <Label disable="true" layoutX="363.0" layoutY="349.0" text="+10$" />
+      <Label disable="true" layoutX="364.0" layoutY="388.0" prefHeight="17.0" prefWidth="30.0" text="-10$" />
+   </children>
+</AnchorPane>
